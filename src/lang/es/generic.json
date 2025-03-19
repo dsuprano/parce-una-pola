@@ -1,0 +1,20 @@
+{
+  "langName": "Español",
+  "anErrorOccurred": "Ocurrió un error",
+  "noResultsFound": "No se encontraron resultados",
+  "from": "Desde",
+  "to": "Hasta",
+  "errors": {
+    "sessionExpired": "Sesión expirada, por favor inicia sesión",
+    "networkError": "La conexión a internet es inestable, por favor intenta de nuevo"
+  },
+  "search": "Buscar",
+  "continue": "Continuar",
+  "start": "Iniciar",
+  "next": "Siguiente",
+  "back": "Atrás",
+  "complete": "Completar",
+  "finish": "Finalizar",
+  "camera": "Solicitar acceso a la cámara",
+  "unrecognizedInput": "Entrada no reconocida"
+}

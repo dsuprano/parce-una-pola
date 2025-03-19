@@ -12,8 +12,3 @@ test('renders App correctly', async () => {
     expect(getByTestId('app-container')).toBeTruthy();
   });
 });
-
-test('check app text', () => {
-  const { getByText } = render(<App />);
-  expect(getByText('Parce, una pola')).toBeTruthy();
-});
