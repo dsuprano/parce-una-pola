@@ -1,5 +1,6 @@
 module.exports = {
   preset: 'react-native',
+  setupFiles: ['<rootDir>/jest.setup.js'],
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**/*.{js,ts,tsx}',
@@ -32,8 +33,16 @@ module.exports = {
   coverageDirectory: '<rootDir>/coverage/',
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.(jpg|jpeg|png|gif|webp|svg)$': '<rootDir>/__mocks__/fileMock.js',
+    '^@react-native-firebase/app$': '<rootDir>/__mocks__/@react-native-firebase/app.js',
+    '^@react-native-firebase/auth$': '<rootDir>/__mocks__/@react-native-firebase/auth.js',
+    '^@react-native-firebase/firestore$': '<rootDir>/__mocks__/@react-native-firebase/firestore.js',
+    '^mobx-react-lite$': '<rootDir>/__mocks__/mobx-react-lite.js',
+    '^@react-native-vector-icons/material-design-icons$': '<rootDir>/__mocks__/react-native-vector-icons.js',
+    '^react-native-snackbar$': '<rootDir>/__mocks__/react-native-snackbar.js',
+    '^react-native-device-info$': '<rootDir>/__mocks__/react-native-device-info.js',
   },
   transformIgnorePatterns: [
-    'node_modules/(?!react-native|@react-native|react-native-gesture-handler|react-native-vector-icons)',
+    'node_modules/(?!react-native|@react-native|react-native-gesture-handler|react-native-vector-icons|@react-native-firebase|mobx-react-lite|@react-navigation|@react-native-vector-icons|react-native-snackbar|react-native-device-info)',
   ],
 };

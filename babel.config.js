@@ -12,7 +12,6 @@ module.exports = {
         root: ['./src/'],
         alias: {
           components: './src/components',
-          config: './src/config',
           helpers: './src/helpers',
           lang: './src/lang',
           models: './src/models',
