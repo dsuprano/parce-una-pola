@@ -1,4 +1,5 @@
 module.exports = {
+  preset: 'react-native',
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**/*.{js,ts,tsx}',
@@ -32,4 +33,7 @@ module.exports = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
   },
+  transformIgnorePatterns: [
+    'node_modules/(?!react-native|@react-native|react-native-gesture-handler|react-native-vector-icons)',
+  ],
 };

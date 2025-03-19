@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 
 function App(): React.JSX.Element {
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="app-container">
       <Text style={styles.text}>Parce, una pola</Text>
     </View>
   );

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "679735317402",
+    "project_id": "parce-una-pola",
+    "storage_bucket": "parce-una-pola.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:679735317402:android:d906b8879be5a340562023",
+        "android_client_info": {
+          "package_name": "com.parceunapola"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZqtFpnlpMEWbecwHLo5kV-w5Ec4KVxb4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
