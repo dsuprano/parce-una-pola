@@ -63,7 +63,7 @@ class AuthStore {
 
   async loadFromBackend() {
     try {
-      const user = await this.userService.me(this.user.uid);
+      const user = await this.userService.me(this.user.id);
 
       if (user) {
         this.initLogin(user);

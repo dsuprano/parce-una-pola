@@ -4,6 +4,7 @@ import theme from 'theme';
 export default StyleSheet.create({
   container: {
     marginTop: 0,
+    marginBottom: 10,
   },
   searchInputWrapper: {
     flexDirection: 'column',

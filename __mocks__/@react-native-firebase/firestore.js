@@ -7,7 +7,7 @@ const mockFirestore = {
           Promise.resolve({
             exists: true,
             data: () => ({
-              uid: '123',
+              id: '123',
               displayName: 'Test User',
               email: 'test@example.com',
               photoURL: '',
@@ -25,7 +25,7 @@ const mockFirestore = {
       Promise.resolve({
         exists: true,
         data: () => ({
-          uid: '123',
+          id: '123',
           displayName: 'Test User',
           email: 'test@example.com',
           photoURL: '',
@@ -40,7 +40,7 @@ const mockFirestore = {
     Promise.resolve({
       exists: true,
       data: () => ({
-        uid: '123',
+        id: '123',
         displayName: 'Test User',
         email: 'test@example.com',
         photoURL: '',

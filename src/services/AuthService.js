@@ -19,14 +19,14 @@ class AuthService {
       return null;
     }
 
-    return { user: UserModel.fromJson(user._user) };
+    return { user: UserModel.fromJson({...user._user, id: user._user.uid}) };
   }
 
   async signup(email, password) {
     return createUserWithEmailAndPassword(auth, email, password)
       .then(({ user, additionalUserInfo }) => ({
         auth: AuthModel.fromJson(user._user, additionalUserInfo.isNewUser, additionalUserInfo.providerId),
-        user: UserModel.fromJson(user._user),
+        user: UserModel.fromJson({...user._user, id: user._user.uid}),
         token: user._user.uid,
       }))
       .catch((error) => {
@@ -39,7 +39,7 @@ class AuthService {
       .then(({ user, additionalUserInfo }) => {
         return {
           auth: AuthModel.fromJson(user._user, additionalUserInfo.isNewUser, additionalUserInfo.providerId),
-          user: UserModel.fromJson(user._user),
+          user: UserModel.fromJson({...user._user, id: user._user.uid}),
           token: user._user.uid,
         };
       })

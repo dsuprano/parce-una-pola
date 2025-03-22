@@ -9,6 +9,7 @@ const silver = '#DEDEDE';
 const gray = '#6E6E6E';
 const white = '#FFFFFF';
 const red = '#FC2947';
+const orange = '#FFA500';
 const green = '#297E65';
 const black = '#000000';
 const blue = '#005DA9';
@@ -27,6 +28,7 @@ export default {
   gray,
   white,
   red,
+  orange,
   green,
   black,
   blue,

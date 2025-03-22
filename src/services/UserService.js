@@ -1,4 +1,14 @@
-import { getFirestore, doc, setDoc, getDoc, serverTimestamp } from '@react-native-firebase/firestore';
+import {
+  getFirestore,
+  doc,
+  setDoc,
+  getDoc,
+  serverTimestamp,
+  getDocs,
+  collection,
+  query,
+  where,
+} from '@react-native-firebase/firestore';
 
 import ErrorModel from 'models/ErrorModel';
 import UserModel from 'models/UserModel';
@@ -8,10 +18,10 @@ const db_users = 'users';
 
 class UserService {
   async createUser(user) {
-    const userRef = doc(db, db_users, user.uid);
+    const userRef = doc(db, db_users, user.id);
 
     return setDoc(userRef, {
-      uid: user.uid,
+      id: user.id,
       displayName: user?.displayName || '',
       email: user.email,
       photoURL: user?.photoURL || '',
@@ -24,9 +34,9 @@ class UserService {
       });
   }
 
-  async me(uid) {
+  async me(id) {
     try {
-      const userRef = doc(db, db_users, uid);
+      const userRef = doc(db, db_users, id);
       const userSnap = await getDoc(userRef);
       const exists = userSnap.exists;
 
@@ -35,6 +45,28 @@ class UserService {
       }
 
       return { user: UserModel.fromJson(userSnap.data()) };
+    } catch (error) {
+      throw ErrorModel.fromJson(error);
+    }
+  }
+
+  async searchUser(params, searchKey, myUID) {
+    try {
+      const usersRef = collection(db, db_users);
+      const q = query(
+        usersRef,
+        where(searchKey, '>=', params[searchKey]),
+        where(searchKey, '<', params[searchKey] + '\uf8ff'),
+      );
+      const querySnapshot = await getDocs(q);
+
+      if (querySnapshot.empty) {
+        return [];
+      }
+
+      return querySnapshot.docs
+        .map((doc) => UserModel.fromJson({ ...doc.data(), id: doc.id }))
+        .filter((user) => user.id !== myUID);
     } catch (error) {
       throw ErrorModel.fromJson(error);
     }

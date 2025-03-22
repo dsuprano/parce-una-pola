@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import PropTypes from 'prop-types';
 
@@ -45,19 +45,21 @@ const styles = StyleSheet.create({
   },
 });
 
-const NoResults = ({ image, icon, title, content, emptyAction = null, emptyActionText = null }) => (
-  <View style={styles.container}>
-    {!!title && <Text style={[styles.title]}>{title}</Text>}
-    {!!content && <Text style={styles.content}>{content}</Text>}
-    {typeof icon === 'string' ? <Icon name={icon} style={styles.icon} /> : icon}
-    {image && <Image source={image} style={styles.image} />}
-    {emptyAction && (
-      <TouchableOpacity onPress={emptyAction} style={styles.actionButton}>
-        <Text style={styles.actionButtonText}>{emptyActionText || ''}</Text>
-      </TouchableOpacity>
-    )}
-  </View>
-);
+const NoResults = memo(({ image, icon, title, content, emptyAction = null, emptyActionText = null }) => {
+  return (
+    <View style={styles.container}>
+      {!!title && <Text style={[styles.title]}>{title}</Text>}
+      {!!content && <Text style={styles.content}>{content}</Text>}
+      {typeof icon === 'string' ? <Icon name={icon} style={styles.icon} /> : icon}
+      {image && <Image source={image} style={styles.image} />}
+      {emptyAction && (
+        <TouchableOpacity onPress={emptyAction} style={styles.actionButton}>
+          <Text style={styles.actionButtonText}>{emptyActionText || ''}</Text>
+        </TouchableOpacity>
+      )}
+    </View>
+  );
+});
 
 NoResults.propTypes = {
   image: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),

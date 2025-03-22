@@ -21,16 +21,15 @@ export default StyleSheet.create({
   },
   content: {
     flex: 1,
-    justifyContent: 'center',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
   userName: {
-    ...theme.fontStyle({
-      fontWeight: '700',
-    }),
+    ...theme.fontStyle(),
   },
-  messageValue: {
-    ...theme.fontStyle({
-      color: theme.text.placeholder,
-    }),
-  },
+  icon: {
+    color: theme.primary,
+    fontSize: 20,
+  }
 });

@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
-import { ActivityIndicator, FlatList, StyleSheet, View } from 'react-native';
+import { ActivityIndicator, SectionList, StyleSheet, View, Text } from 'react-native';
 import { useTranslation } from 'react-i18next';
 import { debounce } from 'lodash';
 
@@ -23,7 +23,9 @@ const styles = StyleSheet.create({
     flex: 0,
   },
   sectionHeader: {
-    marginBottom: 5,
+    paddingVertical: 10,
+    paddingHorizontal: theme.paddingHorizontal,
+    backgroundColor: theme.white,
     ...theme.fontStyle({
       fontSize: 14,
       fontWeight: '700',
@@ -68,19 +70,19 @@ export const INITIAL_PAGINATION_PARAMS = {
   totalPages: 1,
 };
 
-const Listing = ({
+const ListingSection = ({
   renderItem,
   headerComponent = null,
   emptyComponent = null,
+  sectionHeader = null,
   showSearchInput = false,
   searchKey = 'search',
   items = [],
   loading = false,
   onFetchData = () => null,
   contentContainerStyle = {},
-  pagination = INITIAL_PAGINATION_PARAMS,
+  pagination = {},
   dependencies = [],
-  itemLayoutHeight = 80,
   ...restOfProps
 }) => {
   const { t } = useTranslation();
@@ -147,10 +149,13 @@ const Listing = ({
       </View>
     ) : null;
 
+  const renderSectionHeader = ({ section }) =>
+    sectionHeader ? sectionHeader(section) : <Text style={styles.sectionHeader}>{section?.title}</Text>;
+
   return (
     <>
-      <FlatList
-        data={_items}
+      <SectionList
+        sections={_items}
         renderItem={renderItem}
         keyExtractor={(item) => item.id.toString()}
         refreshing={refreshing}
@@ -166,6 +171,7 @@ const Listing = ({
             setParams({ ...params, page: page + 1 });
           }
         }}
+        renderSectionHeader={renderSectionHeader}
         ListHeaderComponent={() => (
           <>
             {headerComponent}
@@ -187,17 +193,17 @@ const Listing = ({
         ListHeaderComponentStyle={styles.header}
         ListFooterComponentStyle={styles.footer}
         contentContainerStyle={[styles.container, contentContainerStyle]}
-        getItemLayout={(_, index) => ({ length: itemLayoutHeight, offset: itemLayoutHeight * index, index })}
         windowSize={10}
         initialNumToRender={10}
         maxToRenderPerBatch={20}
+        stickySectionHeadersEnabled
         {...restOfProps}
       />
     </>
   );
 };
 
-Listing.propTypes = {
+ListingSection.propTypes = {
   renderItem: PropTypes.func.isRequired,
   headerComponent: PropTypes.node,
   emptyComponent: PropTypes.node,
@@ -210,4 +216,4 @@ Listing.propTypes = {
   pagination: PropTypes.oneOfType([PropTypes.object]),
 };
 
-export default Listing;
+export default ListingSection;
