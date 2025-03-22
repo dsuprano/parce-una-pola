@@ -1,7 +1,7 @@
 import { makeAutoObservable } from 'mobx';
 
 class UserModel {
-  uid = null;
+  id = null;
 
   displayName = null;
 
@@ -13,8 +13,8 @@ class UserModel {
 
   createdAt = null;
 
-  constructor(uid, displayName, email, photoURL, phoneNumber, createdAt) {
-    this.uid = uid;
+  constructor(id, displayName, email, photoURL, phoneNumber, createdAt) {
+    this.id = id;
     this.displayName = displayName;
     this.email = email;
     this.photoURL = photoURL;
@@ -25,14 +25,14 @@ class UserModel {
   }
 
   static fromJson({
-    uid,
+    id,
     displayName,
     email,
     photoURL,
     phoneNumber,
     createdAt,
   }) {
-    return new UserModel(uid, displayName, email, photoURL, phoneNumber, createdAt);
+    return new UserModel(id, displayName, email, photoURL, phoneNumber, createdAt);
   }
 }
 

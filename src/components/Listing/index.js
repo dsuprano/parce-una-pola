@@ -1,4 +1,5 @@
 import Listing, { INITIAL_PARAMS_STATE, INITIAL_PAGINATION_PARAMS } from './Listing';
-import ChatItem from './Items/Chat';
+import BeerItem from './Items/Beer';
+import UserItem from './Items/User';
 
-export { Listing, INITIAL_PARAMS_STATE, INITIAL_PAGINATION_PARAMS, ChatItem };
+export { Listing, INITIAL_PARAMS_STATE, INITIAL_PAGINATION_PARAMS, BeerItem, UserItem };

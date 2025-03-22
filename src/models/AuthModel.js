@@ -7,25 +7,25 @@ class AuthModel {
 
   providerData = [];
 
-  uid = null;
+  id = null;
 
   isNewUser = null;
 
   providerId = null;
 
-  constructor(emailVerified, metadata, providerData, uid, isNewUser, providerId) {
+  constructor(emailVerified, metadata, providerData, id, isNewUser, providerId) {
     this.emailVerified = emailVerified;
     this.metadata = metadata;
     this.providerData = providerData;
-    this.uid = uid;
+    this.id = id;
     this.isNewUser = isNewUser;
     this.providerId = providerId;
 
     makeAutoObservable(this);
   }
 
-  static fromJson({ emailVerified, metadata, providerData, uid }, isNewUser = false, providerId = '') {
-    return new AuthModel(emailVerified, metadata, providerData, uid, isNewUser, providerId);
+  static fromJson({ emailVerified, metadata, providerData, id }, isNewUser = false, providerId = '') {
+    return new AuthModel(emailVerified, metadata, providerData, id, isNewUser, providerId);
   }
 }
 

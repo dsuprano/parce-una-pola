@@ -1,14 +1,14 @@
 const mockAuth = {
-  currentUser: { uid: '123', email: 'test@example.com' },
+  currentUser: { id: '123', email: 'test@example.com' },
   createUserWithEmailAndPassword: jest.fn((auth, email, password) =>
     Promise.resolve({
-      user: { _user: { uid: '123', email } },
+      user: { _user: { id: '123', email } },
       additionalUserInfo: { isNewUser: true, providerId: 'password' },
     }),
   ),
   signInWithEmailAndPassword: jest.fn((auth, email, password) =>
     Promise.resolve({
-      user: { _user: { uid: '123', email } },
+      user: { _user: { id: '123', email } },
       additionalUserInfo: { isNewUser: false, providerId: 'password' },
     }),
   ),

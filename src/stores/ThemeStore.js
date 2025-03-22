@@ -22,7 +22,7 @@ class ThemeStore {
     runInAction(() => {
       this.statusBarColor = INITIAL_STATE.statusBarColor;
       this.safeAreaTopColor = INITIAL_STATE.safeAreaTopColor;
-      this.safeAreaBottomColor = INITIAL_STATE.safeAreaBottomColor;
+      this.safeAreaBottomColor = theme.white;
     });
   }
 }
