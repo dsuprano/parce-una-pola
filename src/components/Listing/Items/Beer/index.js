@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Image, ActivityIndicator } from 'react-native';
+import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { observer } from 'mobx-react-lite';
 
+import { GROUP_CART_STATUS } from 'models/GroupModel';
 import Icon from 'components/ui/Icon';
 import styles from './styles';
-import { GROUP_CART_STATUS } from 'models/GroupModel';
 
 const BeerItem = observer(({ beer, group, me }) => {
   const { name, brand, image, price, totalStock, cant } = beer;

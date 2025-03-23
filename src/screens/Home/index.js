@@ -13,6 +13,7 @@ import NoResults from 'components/ui/NoResults';
 import GroupItem from 'components/Listing/Items/Group';
 
 import styles from './styles';
+import { GROUP_CART_STATUS } from 'models/GroupModel';
 
 const HomeScreen = ({ navigation }) => {
   const { t } = useTranslation();
@@ -37,7 +38,11 @@ const HomeScreen = ({ navigation }) => {
   };
 
   const onPressGroup = (group) => {
-    navigation.navigate(routes.GROUP, { groupId: group.id });
+    if (group?.status === GROUP_CART_STATUS.OPEN) {
+      navigation.navigate(routes.GROUP, { groupId: group.id });
+    } else {
+      navigation.navigate(routes.CART, { groupId: group.id });
+    }
   };
 
   useFocusEffect(

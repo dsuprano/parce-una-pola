@@ -163,7 +163,7 @@ const ListingSection = ({
           setRefreshing(true);
           setParams({ ...params, page: 1 });
         }}
-        onEndReachedThreshold={0.1}
+        onEndReachedThreshold={0.5}
         onEndReached={() => {
           const { page } = params;
           if (page < totalPages && !loadingMore && !_loading && !refreshing) {
@@ -193,9 +193,11 @@ const ListingSection = ({
         ListHeaderComponentStyle={styles.header}
         ListFooterComponentStyle={styles.footer}
         contentContainerStyle={[styles.container, contentContainerStyle]}
-        windowSize={10}
-        initialNumToRender={10}
-        maxToRenderPerBatch={20}
+        windowSize={5} // Solo renderiza 5 veces la altura de la pantalla
+        initialNumToRender={10} // Solo renderiza 10 items al inicio
+        maxToRenderPerBatch={10} // Carga 10 más a la vez
+        updateCellsBatchingPeriod={50} // Reduce el tiempo de actualización
+        removeClippedSubviews={true} // Optimiza el uso de memoria en Android
         stickySectionHeadersEnabled
         {...restOfProps}
       />

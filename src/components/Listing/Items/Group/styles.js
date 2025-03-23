@@ -10,6 +10,25 @@ export default StyleSheet.create({
     borderBottomColor: theme.textInputBorderColor,
     alignItems: 'center',
   },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 5,
+  },
+  statusContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 10,
+    paddingVertical: 2,
+    paddingHorizontal: 10,
+  },
+  status: {
+    ...theme.fontStyle({
+      fontSize: 12,
+      color: theme.white,
+    }),
+  },
   info: {
     flex: 1,
     justifyContent: 'center',

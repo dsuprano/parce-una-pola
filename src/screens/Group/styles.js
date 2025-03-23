@@ -15,6 +15,9 @@ export default StyleSheet.create({
   },
   containerList: {},
   sectionHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
     backgroundColor: theme.primary,
     paddingVertical: 10,
     paddingHorizontal: theme.paddingHorizontal,

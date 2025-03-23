@@ -12,6 +12,8 @@ import { BeerItem } from 'components/Listing';
 import NoResults from 'components/ui/NoResults';
 
 import styles from './styles';
+import GeoDistance from 'components/Geolocation';
+import Badge from 'components/Badge';
 
 const GroupScreen = ({ navigation, route }) => {
   const { t } = useTranslation();
@@ -25,8 +27,9 @@ const GroupScreen = ({ navigation, route }) => {
 
       headerRight: () =>
         groupStore?.currentGroup && (
-          <TouchableOpacity onPress={() => navigation.navigate(routes.CART)}>
+          <TouchableOpacity onPress={() => navigation.navigate(routes.CART, { groupId })}>
             <Icon name="cart-outline" style={styles.icon} />
+            <Badge count={groupStore?.currentGroup?.totalItemsCart || 0} />
           </TouchableOpacity>
         ),
     });
@@ -36,6 +39,7 @@ const GroupScreen = ({ navigation, route }) => {
     return (
       <View style={styles.sectionHeader}>
         <Text style={styles.sectionTitle}>{section.title}</Text>
+        <GeoDistance target={{ latitude: section.latitude, longitude: section.longitude }} />
       </View>
     );
   }, []);

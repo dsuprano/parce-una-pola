@@ -2,11 +2,24 @@ import _ from 'lodash';
 import { makeAutoObservable } from 'mobx';
 import BreweryModel from './BreweryModel';
 import BeerModel from './BeerModel';
+import theme from 'theme';
 
 export const GROUP_CART_STATUS = {
   OPEN: 'open',
   CLOSED: 'closed',
   DELIVERED: 'delivered',
+};
+
+export const GROUP_CART_STATUS_TEXT = {
+  [GROUP_CART_STATUS.OPEN]: 'Abierto',
+  [GROUP_CART_STATUS.CLOSED]: 'En camino',
+  [GROUP_CART_STATUS.DELIVERED]: 'Entregado',
+};
+
+export const GROUP_CART_STATUS_COLOR = {
+  [GROUP_CART_STATUS.OPEN]: theme.green,
+  [GROUP_CART_STATUS.CLOSED]: theme.red,
+  [GROUP_CART_STATUS.DELIVERED]: theme.blue,
 };
 
 class GroupModel {
@@ -37,6 +50,7 @@ class GroupModel {
     this.breweries = breweries.map((b) => BreweryModel.fromJson(b, this.cart, me));
     this.groupService = groupService;
     this.syncCart = _.debounce(this._syncCart, 1000);
+    this.me = me;
 
     makeAutoObservable(this);
   }
@@ -82,6 +96,12 @@ class GroupModel {
 
   setStatus(status) {
     this.status = status;
+
+    this.groupService.changeGroupStatus(this.id, status);
+
+    if (status === GROUP_CART_STATUS.DELIVERED) {
+      console.log('Notificar pedido recibido');
+    }
   }
 
   get filteredCart() {
@@ -97,11 +117,11 @@ class GroupModel {
   }
 
   get canPlaceOrder() {
-    return this.totalItemsCart > 0 && this.status === GROUP_CART_STATUS.OPEN;
+    return this.totalItemsCart > 0;
   }
 
-  get canCloseOrder() {
-    return this.status === GROUP_CART_STATUS.CLOSED;
+  get isMyGroup() {
+    return this.createdBy.id === this.me.id;
   }
 
   static fromJson({ id, name, members, createdBy, createdAt, status, cart = [], breweries = [] }, groupService, me) {
