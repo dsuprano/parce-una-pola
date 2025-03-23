@@ -1,3 +1,4 @@
+import { checkBiometrics } from 'helpers/biometrics';
 import { makeAutoObservable, runInAction } from 'mobx';
 import { makePersistable } from 'mobx-persist-store';
 
@@ -9,6 +10,7 @@ const STORAGE_KEYS = {
   AUTH: 'auth',
   USER: 'user',
   LANG: 'lang',
+  BIOMETRIC_CONFIGURE: 'biometricConfigure',
 };
 
 const INITIAL_STATE = {
@@ -16,6 +18,8 @@ const INITIAL_STATE = {
   token: null,
   auth: null,
   user: null,
+  biometricPermission: false,
+  biometricConfigure: false,
   lang: 'es',
 };
 
@@ -31,6 +35,10 @@ class AuthStore {
   user = INITIAL_STATE.user;
 
   lang = INITIAL_STATE.lang;
+
+  biometricPermission = INITIAL_STATE.biometricPermission;
+
+  biometricConfigure = INITIAL_STATE.biometricConfigure;
 
   constructor() {
     makeAutoObservable(this);
@@ -97,6 +105,8 @@ class AuthStore {
         });
       }
     });
+
+    checkBiometrics(this);
   }
 
   async login(email, password) {
@@ -118,6 +128,30 @@ class AuthStore {
     } catch (err) {
       throw err;
     }
+  }
+
+  setBiometricConfigure(value) {
+    runInAction(() => {
+      this.biometricConfigure = value;
+    });
+  }
+
+  setBiometricPermission(value) {
+    this.biometricPermission = value;
+
+    /* if (value) {
+      if (this.timeoutId) {
+        clearTimeout(this.timeoutId);
+      }
+
+      this.timeoutId = setTimeout(() => {
+        runInAction(() => {
+          this.biometricPermission = !value;
+        });
+
+        this.timeoutId = null;
+      }, 3000);
+    } */
   }
 
   async clear() {

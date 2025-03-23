@@ -5,6 +5,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import AuthNavigator from 'navigation/AuthNavigator';
 import GuestNavigator from 'navigation/GuestNavigator';
 
+import BiometricsProvider from 'providers/BiometricsProvider';
 import { useStore } from 'providers/StoreProvider';
 import NavigationHelper from 'helpers/navigation';
 
@@ -34,7 +35,7 @@ const AppNavigator = () => {
         onStateChange={NavigationHelper.onNavigationStateChange}
         fallback={<SplashFallback />}
       >
-        {renderNavigator()}
+          <BiometricsProvider>{renderNavigator()}</BiometricsProvider>
       </NavigationContainer>
     );
   }

@@ -19,14 +19,6 @@ export default StyleSheet.create({
     backgroundColor: theme.primary,
     padding: theme.paddingHorizontal,
   },
-  button: {
-    backgroundColor: theme.white,
-  },
-  buttonText: {
-    ...theme.fontStyle({
-      fontWeight: 'bold',
-    }),
-  },
   total: {
     flex: 1,
     ...theme.fontStyle({

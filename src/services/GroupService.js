@@ -80,6 +80,16 @@ class GroupService {
     }
   }
 
+  async changeGroupStatus(groupId, status) {
+    try {
+      const groupRef = doc(db, db_groups, groupId);
+
+      return updateDoc(groupRef, { status });
+    } catch (error) {
+      throw ErrorModel.fromJson(error);
+    }
+  }
+
   async syncCart(groupId, cart, me) {
     try {
       const groupRef = doc(db, db_groups, groupId);

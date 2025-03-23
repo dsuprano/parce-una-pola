@@ -15,6 +15,8 @@ class RootStore {
   }
 
   async logout() {
+    this.userStore.clear();
+    this.groupStore.clear();
     await this.authStore.clear();
   }
 }
