@@ -1,6 +1,8 @@
 # Parce, una pola
 
-![simulator_screenshot_A4C5EEF4-EAAC-4B7E-A5E6-93DD6119FC76](https://github.com/user-attachments/assets/0f8e3138-f8b7-47b3-8fab-e6aa1ac28974)
+![Inicio de sesión](https://github.com/user-attachments/assets/0f8e3138-f8b7-47b3-8fab-e6aa1ac28974)
+
+<img src="https://github.com/user-attachments/assets/0f8e3138-f8b7-47b3-8fab-e6aa1ac28974" width="48">
 
 ![simulator_screenshot_7AC23A53-0C44-46F0-A19B-AD9F49FB6878](https://github.com/user-attachments/assets/8accd4bc-4b73-477f-8a08-a7e0963a30e2)
 
