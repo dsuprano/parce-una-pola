@@ -23,12 +23,12 @@
 
 - [x] Lista de Cervezas
 - [x] Carrito de Compras Colaborativo
-- [ ] Notificaciones Push
+- [ ] Notificaciones Push ** (No implementado)
 - [x] Persistencia de Datos
-- [ ] Unit Testing ** (Incompleto, solo test global)
+- [ ] Unit Testing ** (Implementación incompleta, solo test global)
 - [x] Arquitectura Modular
 - [x] Seguridad
-- [ ] Integración con APIs Nativas (opcional) ** (Incompleto, solo librería de geolocalización)
+- [ ] Integración con APIs Nativas (opcional) ** (Implementación incompleta, solo librería de geolocalización)
 - [x] Performance Avanzado (opcional)
 - [x] Animaciones con Reanimated (opcional)
 
