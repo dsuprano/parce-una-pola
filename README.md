@@ -1,24 +1,34 @@
 # Parce, una pola
 
+![simulator_screenshot_A4C5EEF4-EAAC-4B7E-A5E6-93DD6119FC76](https://github.com/user-attachments/assets/0f8e3138-f8b7-47b3-8fab-e6aa1ac28974)
+
+![simulator_screenshot_7AC23A53-0C44-46F0-A19B-AD9F49FB6878](https://github.com/user-attachments/assets/8accd4bc-4b73-477f-8a08-a7e0963a30e2)
+
+![simulator_screenshot_81DDAF22-1A70-4B6F-BBE4-D9DAA666294B](https://github.com/user-attachments/assets/9ddc00fd-7aef-4f56-be9f-8f17c1c6fb03)
+
+![simulator_screenshot_C6F50495-489B-4651-84DE-A50849297B66](https://github.com/user-attachments/assets/d3fa18fb-8e58-495e-8d3f-f3efaadac88e)
+
+![simulator_screenshot_EF240943-2898-4E83-B694-0015BE86A7D8](https://github.com/user-attachments/assets/4d7025a1-78c2-4af5-be64-2f529cc1f8e1)
+
+![simulator_screenshot_34B16A5A-31B5-4EF5-93F3-C1AE92C44C9C](https://github.com/user-attachments/assets/17c23c92-6458-41bd-b02a-ff3d13c5c08f)
+
+![simulator_screenshot_6AF615A4-AC78-40A8-8EEC-2EF182B93705](https://github.com/user-attachments/assets/fa2dc054-0957-4925-a6ba-491640af68be)
+
+![simulator_screenshot_5C48C8BB-ACC2-4CF1-8E33-2B426AE62FE3](https://github.com/user-attachments/assets/ba59b72c-61ae-4dbe-a9de-802cc6ed1bec)
+
+![simulator_screenshot_71292972-E7FF-48D2-B1BB-3BF731DC9A82](https://github.com/user-attachments/assets/ef286570-17e1-45d7-97b3-4ac2a00f78a0)
+
+![simulator_screenshot_16DF80D4-DEC8-495B-8B66-01C0E38CB686](https://github.com/user-attachments/assets/69b6ac9a-3ca5-448f-a29f-cc9196bed553)
+
+![simulator_screenshot_15ECCD74-F7AD-44C7-AF21-34A470282B92](https://github.com/user-attachments/assets/ed38d921-6699-48c6-a488-583a6379898a)
+
 ## Enlace de descarga
 - [Drive](https://drive.google.com/file/d/1VDwmZquP4aIDQJ9ApL-Razti8e_mskRy/view?usp=drive_link)
-- [Expor](https://expo.dev/accounts/dcedeno/projects/parceUnaPola/builds/37519595-b210-49f4-aea7-3a61215fd848)
-
-
-
-
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+- [Expo](https://expo.dev/accounts/dcedeno/projects/parceUnaPola/builds/37519595-b210-49f4-aea7-3a61215fd848)
 
 # Getting Started
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
-
 ## Step 1: Start Metro
-
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
-
-To start the Metro dev server, run the following command from the root of your React Native project:
-
 ```sh
 # Using npm
 npm start
@@ -66,41 +76,3 @@ npm run ios
 # OR using Yarn
 yarn ios
 ```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
