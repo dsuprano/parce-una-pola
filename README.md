@@ -19,6 +19,19 @@
 - [Drive](https://drive.google.com/file/d/1VDwmZquP4aIDQJ9ApL-Razti8e_mskRy/view?usp=drive_link)
 - [Expo](https://expo.dev/accounts/dcedeno/projects/parceUnaPola/builds/37519595-b210-49f4-aea7-3a61215fd848)
 
+## Cumplimiento de requerimientos
+
+[x] Lista de Cervezas
+[x] Carrito de Compras Colaborativo
+[ ] Notificaciones Push
+[x] Persistencia de Datos
+[-] Unit Testing
+[x] Arquitectura Modular
+[x] Seguridad
+[-] Integración con APIs Nativas (opcional)
+[x] Performance Avanzado (opcional)
+[x] Animaciones con Reanimated (opcional)
+
 # Getting Started
 
 ## Step 1: Start Metro
