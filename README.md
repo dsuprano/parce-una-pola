@@ -21,16 +21,16 @@
 
 ## Cumplimiento de requerimientos
 
-[x] Lista de Cervezas
-[x] Carrito de Compras Colaborativo
-[ ] Notificaciones Push
-[x] Persistencia de Datos
-[-] Unit Testing
-[x] Arquitectura Modular
-[x] Seguridad
-[-] Integración con APIs Nativas (opcional)
-[x] Performance Avanzado (opcional)
-[x] Animaciones con Reanimated (opcional)
+- [x] Lista de Cervezas
+- [x] Carrito de Compras Colaborativo
+- [ ] Notificaciones Push
+- [x] Persistencia de Datos
+- [ ] Unit Testing ** (Incompleto, solo test global)
+- [x] Arquitectura Modular
+- [x] Seguridad
+- [ ] Integración con APIs Nativas (opcional) ** (Incompleto, solo librería de geolocalización)
+- [x] Performance Avanzado (opcional)
+- [x] Animaciones con Reanimated (opcional)
 
 # Getting Started
 
