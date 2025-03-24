@@ -1,4 +1,23 @@
 {
   "name": "parceUnaPola",
-  "displayName": "parceUnaPola"
+  "displayName": "parceUnaPola",
+  "expo": {
+    "name": "Parce, una pola",
+    "slug": "parceUnaPola",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "bundleIdentifier": "com.parceunapola"
+    },
+    "android": {
+      "package": "com.parceunapola"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "246e8f87-c905-4978-8042-fcc7a03b677b"
+      }
+    }
+  }
 }

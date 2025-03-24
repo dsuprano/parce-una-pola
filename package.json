@@ -27,6 +27,7 @@
     "@react-navigation/stack": "^7.1.2",
     "airbnb": "^0.0.2",
     "babel-plugin-module-resolver": "^5.0.2",
+    "expo": "^52.0.40",
     "formik": "^2.4.6",
     "geolib": "^3.3.4",
     "i18next": "^24.2.3",
