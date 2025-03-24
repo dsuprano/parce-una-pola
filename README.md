@@ -1,3 +1,12 @@
+# Parce, una pola
+
+## Enlace de descarga
+- [Drive](https://drive.google.com/file/d/1VDwmZquP4aIDQJ9ApL-Razti8e_mskRy/view?usp=drive_link)
+- [Expor](https://expo.dev/accounts/dcedeno/projects/parceUnaPola/builds/37519595-b210-49f4-aea7-3a61215fd848)
+
+
+
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
