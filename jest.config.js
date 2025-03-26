@@ -41,8 +41,10 @@ module.exports = {
     '^@react-native-vector-icons/material-design-icons$': '<rootDir>/__mocks__/react-native-vector-icons.js',
     '^react-native-snackbar$': '<rootDir>/__mocks__/react-native-snackbar.js',
     '^react-native-device-info$': '<rootDir>/__mocks__/react-native-device-info.js',
+    '^react-native-gesture-handler$': '<rootDir>/__mocks__/react-native-gesture-handler.js',
+    '^react-native-biometrics$': '<rootDir>/__mocks__/react-native-biometrics.js',
   },
   transformIgnorePatterns: [
-    'node_modules/(?!react-native|@react-native|react-native-gesture-handler|react-native-vector-icons|@react-native-firebase|mobx-react-lite|@react-navigation|@react-native-vector-icons|react-native-snackbar|react-native-device-info)',
+    'node_modules/(?!react-native|@react-native|react-native-gesture-handler|react-native-vector-icons|@react-native-firebase|mobx-react-lite|@react-navigation|@react-native-vector-icons|react-native-snackbar|react-native-device-info|react-native-gesture-handler|react-native-biometrics)',
   ],
 };
